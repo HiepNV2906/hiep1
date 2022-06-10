@@ -47,13 +47,14 @@ public class QuenMatKhau extends HttpServlet{
         }
         
         // Dang nhap mail server
-		final String username_mail = "bookawesometravel@gmail.com";
-		final String password_mail = "ttcs08052022";
+		final String username_mail = "websachltw@yahoo.com";
+		final String password_mail = "oazuuqjohrgqvbdw";
 		Properties props = new Properties();
-		props.put("mail.smtp.host", "smtp.gmail.com");
+		props.put("mail.smtp.host", "smtp.mail.yahoo.com");
 		props.put("mail.smtp.port", "587");
 		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
+                props.put("mail.smtp.starttls.enable", "true");
+//                props.put("mail.debug", "true");
 		Session session = Session.getInstance(props, new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication(username_mail, password_mail);
