@@ -36,7 +36,7 @@ public class SachDao extends ConnectDatabase{
                 List<TheLoai> tlSach=new ArrayList<>();
                 while(rsTL.next()) {
                     TheLoai tl=new TheLoai();
-                    tl.setID_TheLoai(rsTL.getInt(1)+"");
+                    tl.setID_TheLoai(rsTL.getInt(1));
                     tl.setTenTheLoai(rsTL.getString(2));
                     sach.getTheLoaiSach().add(tl);
 
@@ -91,7 +91,7 @@ public class SachDao extends ConnectDatabase{
                 List<TheLoai> tL=new ArrayList<>(); 
                 while(rs.next()){
                     TheLoai tl=new TheLoai();
-                    tl.setID_TheLoai(rs.getInt(1)+"");
+                    tl.setID_TheLoai(rs.getInt(1));
                     tl.setTenTheLoai(rs.getString(2));
                     tL.add(tl);
                }
@@ -142,7 +142,7 @@ public class SachDao extends ConnectDatabase{
         		 ppst=this.conn.prepareStatement("insert into TheLoaiSach values (?,?)");
         		 for(TheLoai tl:listTheLoai ) {
         			 ppst.setInt(1, id_sach);
-        			 ppst.setInt(2,Integer.parseInt(tl.getID_TheLoai()));
+        			 ppst.setInt(2,tl.getID_TheLoai());
         			 ppst.addBatch();
         		 };
         		 ppst.executeBatch();

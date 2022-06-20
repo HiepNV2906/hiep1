@@ -1,7 +1,7 @@
 package tach.web.model;
 
 public class TheLoai {
-	private String ID_TheLoai;
+	private int ID_TheLoai;
 	private String TenTheLoai;
 	
 //	public TheLoai(String id_TheLoai, String tenTheLoai) {
@@ -10,10 +10,10 @@ public class TheLoai {
 //		TenTheLoai = tenTheLoai;
 //	}
 	
-	public String getID_TheLoai() {
+	public int getID_TheLoai() {
 		return ID_TheLoai;
 	}
-	public void setID_TheLoai(String iD_TheLoai) {
+	public void setID_TheLoai(int iD_TheLoai) {
 		ID_TheLoai = iD_TheLoai;
 	}
 	public String getTenTheLoai() {
